@@ -1,6 +1,8 @@
-www:
-  build: .
-  ports:
-    - "80:80"
-  volumes:
-    - ./www:/var/www/html
+version: "1.0"
+services:
+  www:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html

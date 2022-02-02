@@ -1,3 +1,3 @@
 <?php
 
-echo "Iniciando com Docker";
+require_once('view/template.php');
