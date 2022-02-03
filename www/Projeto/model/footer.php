@@ -45,6 +45,7 @@
 
 <!-- JS -->
 <script src="model/js/main.js"></script>
+<script src="model/js/cfg.js"></script>
 
 
 </html>

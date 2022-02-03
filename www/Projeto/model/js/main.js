@@ -2,11 +2,6 @@
 
 $(document).ready(function () {
 
-  if (!$('nav').hasClass('color-1') || !$('nav').hasClass('color-2') || !$('nav').hasClass('color-3') || !$('nav').hasClass('color-4')) {
-    $('nav').addClass('color-1');
-    $('#customRange').val('10');
-  }
-
   $('#customRange').change(function () {
     let val = $(this).val();
     tipo = 0;
@@ -50,7 +45,7 @@ $(document).ready(function () {
     }
 
     $.ajax({
-      type: 'POST',
+      type: "POST",
       url: 'controller/api.php',
       data: {
         'action': 'setCookie',
@@ -61,11 +56,12 @@ $(document).ready(function () {
       // beforeSend: function () {
       //   $('.delete-' + idDeleted).html('Aguarde...');
       // },
-      success: function (success) {
-        console.log(success);
+      success: function (data) {
+        json = JSON.parse(data);
+
+        document.cookie = json.name + "=" + json.value + "=" + json.tipo;
       },
     });
-
 
   });
 

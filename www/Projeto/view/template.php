@@ -6,18 +6,13 @@ require_once('model/header.php');
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-light">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg nav-cookie">
+
+    <div class="container-fluid">
+
       <a class="navbar-brand" href="#">
         <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
       </a>
-    </div>
-  </nav>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-    <div class="container-fluid">
 
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
