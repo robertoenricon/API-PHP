@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: "POST",
-      url: 'controller/api.php',
+      url: '../controller/api.php',
       data: {
         'action': 'setCookie',
         'name': 'cookieLayout',
@@ -58,8 +58,9 @@ $(document).ready(function () {
       // },
       success: function (data) {
         json = JSON.parse(data);
-
-        document.cookie = json.name + "=" + json.value + "=" + json.tipo;
+        if (json != '') {
+          document.cookie = json.name + "=" + json.value + "=" + json.tipo;
+        }
       },
     });
 

@@ -1,5 +1,9 @@
 <?php
 
+require_once('class/api.class.php');
+
+new api();
+
 $action = isset($_POST['action']) ? $_POST['action'] : '';
 $tipo = isset($_POST['tipo']) ? $_POST['tipo'] : '';
 $name = isset($_POST['name']) ? $_POST['name'] : '';

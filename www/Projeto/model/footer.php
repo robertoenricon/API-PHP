@@ -1,3 +1,8 @@
+<?php
+
+require_once('../controller/class/cfg.class.php');
+
+?>
 <footer class="text-center text-lg-start">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
@@ -34,18 +39,12 @@
   <!-- Grid container -->
 </footer>
 
+<?php
 
-<!-- Optional JavaScript; choose one of the two! -->
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+$js = new cssJs();
+echo $js->js(basename($_SERVER['PHP_SELF'], '.php'));
 
-<!-- CDN JQUERY -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- JS -->
-<script src="model/js/main.js"></script>
-<script src="model/js/cfg.js"></script>
-
+?>
 
 </html>

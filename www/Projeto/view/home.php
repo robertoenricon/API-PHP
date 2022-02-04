@@ -1,12 +1,15 @@
 <?php
 
-require_once('model/header.php');
+require_once('../model/header.php');
+
+$cookie = new cookie();
+$cookie = $cookie->get_cookie();
 
 ?>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg nav-cookie">
+  <nav class="navbar navbar-expand-lg nav-cookie <?php echo isset($cookie) ? 'color-' . $cookie['cookieType'] : 'color-1'; ?>">
 
     <div class="container-fluid">
 
@@ -67,7 +70,7 @@ require_once('model/header.php');
                     <h6>Escolha a cor do seu Layout</h6>
                   </label>
                   <form class="margin-range">
-                    <input type="range" class="custom-range" id="customRange" min="0" max="100">
+                    <input type="range" class="custom-range" id="customRange" min="0" max="100" value="<?php echo isset($cookie) ? $cookie['cookieVal'] : '10'; ?>">
                   </form>
                 </li>
                 <li>
@@ -94,7 +97,7 @@ require_once('model/header.php');
 
   <?php
 
-  require_once('model/footer.php');
+  require_once('../model/footer.php');
 
   ?>
 

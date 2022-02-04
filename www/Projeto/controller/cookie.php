@@ -1,13 +1,15 @@
 <?php
 
-require_once('cfg.php');
+require_once('class/api.class.php');
+
+new api();
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';
 $tipo = isset($_POST['tipo']) ? $_POST['tipo'] : '';
 $expired = isset($_POST['expired']) ? $_POST['expired'] : false;
 
 if (isset($_COOKIE[$name])) {
-  setcookie($_COOKIE[$name], '', time() - 3600); //tira -1 hora = remove o cookie
+  setcookie($_COOKIE[$name], '', time() - 3600);
 }
 
 if ($tipo == '1') {
