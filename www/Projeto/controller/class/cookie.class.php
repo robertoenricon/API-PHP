@@ -3,7 +3,7 @@
 class cookie
 {
   /**
-   * Função responsável por retornar o COOKIE criado
+   * Função responsável por retornar o COOKIE criado no JS
    * 
    * @return array $cookieVal = valor do cookie
    * @return string $cookieType = tipo do cookie

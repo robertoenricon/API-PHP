@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: "POST",
-      url: '../controller/api.php',
+      url: '../controller/api.php?json=1',
       data: {
         'action': 'setCookie',
         'name': 'cookieLayout',
@@ -65,5 +65,36 @@ $(document).ready(function () {
     });
 
   });
+
+  listJson();
+
+  function listJson() {
+    $.ajax({
+      type: "GET",
+      url: '../controller/search.php',
+      success: function (data) {
+        json = JSON.parse(data);
+
+        if (json) {
+          $.each(json.data, function (i, val) {
+            $('#list').append(
+              '<tr>' +
+              '<td>' + val.user + '</td>' +
+              '<td>' + val.pass + '</td>' +
+              '</tr>'
+            )
+          });
+
+        } else {
+          Swal.fire(
+            'Ops!',
+            'Nenhum registro encontrado',
+            'question'
+          );
+        }
+
+      },
+    });
+  }
 
 });

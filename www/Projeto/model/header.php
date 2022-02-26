@@ -8,7 +8,7 @@ if (isset($url) && $url == 'login') {
 } else {
   require_once('../controller/class/cfg.class.php');
   require_once('../controller/class/cookie.class.php');
-  require_once('../controller/class/api.class.php');
+  require_once('../controller/api.php');
 
   $css = new cssJs();
   $css = $css->css(basename($_SERVER['PHP_SELF'], '.php'));
@@ -26,7 +26,6 @@ if (isset($url) && $url == 'login') {
 
   <?php echo $css; ?>
 
-  <title>WebStyleFull - By Roberto Enrico</title>
-
+  <title>Style Web Full - By Roberto Enrico</title>
 
 </head>

@@ -1,8 +1,8 @@
 <?php
 
-require_once('class/api.class.php');
-
-new api();
+if (isset($_GET['json']) && $_GET['json'] == '1') {
+  $_POST = json_decode(file_get_contents("php://input"), true);
+}
 
 $name = isset($_POST['name']) ? $_POST['name'] : '';
 $tipo = isset($_POST['tipo']) ? $_POST['tipo'] : '';

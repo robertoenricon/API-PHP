@@ -1,0 +1,16 @@
+{
+  "cadastro": [
+    {
+      "user": "rob",
+      "pass": "1234"
+    },
+    {
+      "user": "teste",
+      "pass": "1234"
+    },
+    {
+      "user": "ana",
+      "pass": "123"
+    }
+  ]
+}
